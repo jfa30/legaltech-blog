@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LexEditorial - Tecnología Legal para Abogados Modernos</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#2d486d",
+              "primary-container": "#1e3a5f",
+              "surface-container-high": "#e7e8e9",
+              "surface-tint": "#455f87",
+              "inverse-primary": "#adc8f5",
+              "on-secondary-fixed": "#091d2e",
+              "inverse-on-surface": "#f0f1f2",
+              "error": "#ba1a1a",
+              "inverse-surface": "#2e3132",
+              "on-background": "#191c1d",
+              "secondary": "#4e6073",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed-dim": "#b5c8df",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "on-primary-fixed": "#001c3b",
+              "secondary-fixed": "#d1e4fb",
+              "on-tertiary-container": "#4f3e00",
+              "primary": "#022448",
+              "on-surface-variant": "#43474e",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#adc8f5",
+              "surface-dim": "#d9dadb",
+              "on-secondary": "#ffffff",
+              "on-tertiary-fixed-variant": "#574500",
+              "surface-container-highest": "#e1e3e4",
+              "surface": "#f8f9fa",
+              "on-surface": "#191c1d",
+              "tertiary-fixed-dim": "#e9c349",
+              "surface-bright": "#f8f9fa",
+              "tertiary-container": "#cca830",
+              "on-secondary-container": "#526478",
+              "on-tertiary-fixed": "#241a00",
+              "outline": "#74777f",
+              "on-secondary-fixed-variant": "#36485b",
+              "on-error": "#ffffff",
+              "surface-variant": "#e1e3e4",
+              "outline-variant": "#c4c6cf",
+              "primary-fixed": "#d5e3ff",
+              "tertiary-fixed": "#ffe088",
+              "on-primary-container": "#8aa4cf",
+              "surface-container": "#edeeef",
+              "surface-container-lowest": "#ffffff",
+              "background": "#f8f9fa",
+              "secondary-container": "#cfe2f9",
+              "tertiary": "#735c00",
+              "surface-container-low": "#f3f4f5"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-shift-via-blur {
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px);
+      }
+      .dark .tonal-shift-via-blur {
+        background-color: rgba(2, 36, 72, 0.85);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- Section 1: Sticky Header -->
+<header class="fixed top-0 w-full z-50 bg-white/85 dark:bg-slate-950/85 backdrop-blur-xl shadow-[0_20px_40px_rgba(2,36,72,0.05)] dark:shadow-none">
+<nav class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+<div class="text-2xl font-serif font-bold tracking-tight text-[#022448] dark:text-slate-100">
+                LexEditorial
+            </div>
+<ul class="hidden md:flex items-center space-x-8">
+<li><a class="text-slate-600 dark:text-slate-400 font-medium hover:text-[#022448] dark:hover:text-slate-200 transition-colors" href="#">Software</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 font-medium hover:text-[#022448] dark:hover:text-slate-200 transition-colors" href="#">Hardware</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 font-medium hover:text-[#022448] dark:hover:text-slate-200 transition-colors" href="#">Productivity</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 font-medium hover:text-[#022448] dark:hover:text-slate-200 transition-colors" href="#">Legal AI</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 font-medium hover:text-[#022448] dark:hover:text-slate-200 transition-colors" href="#">Reviews</a></li>
+</ul>
+<div class="flex items-center space-x-6">
+<button class="text-[#022448] dark:text-slate-100 hover:text-[#d4af37] transition-all duration-300 scale-95 active:scale-100">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-[#022448] dark:text-slate-100 hover:text-[#d4af37] transition-all duration-300 scale-95 active:scale-100">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Section 2: Hero Section -->
+<section class="relative py-24 px-8 overflow-hidden bg-surface">
+<div class="max-w-4xl mx-auto text-center space-y-8 relative z-10">
+<h1 class="text-5xl md:text-7xl font-headline font-bold text-primary leading-tight tracking-tight">
+                    Tecnología Legal para Abogados Modernos
+                </h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-light max-w-2xl mx-auto">
+                    Optimiza tu tiempo y escala tu despacho con las mejores herramientas del mercado.
+                </p>
+<div class="mt-12 bg-surface-container-lowest p-2 rounded-xl shadow-[0_20px_40px_rgba(2,36,72,0.05)] flex flex-col md:flex-row gap-4 max-w-xl mx-auto outline-variant/15 outline outline-1">
+<input class="flex-grow px-6 py-4 bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline italic" placeholder="Tu correo profesional" type="email"/>
+<button class="bg-tertiary hover:bg-tertiary-container text-on-tertiary px-8 py-4 font-bold transition-all duration-300 whitespace-nowrap">
+                        Recibir Guías Gratuitas
+                    </button>
+</div>
+</div>
+<!-- Decorative Subtle Pattern -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCymh9a7huF-R0WfnVkVr8BbIMv9Ma3Nam9zIy3-WL2RSQN1PpIjiNcu6PVIiEO01trSCX-LHH4C7WQvUMobT6WBi5Aspq8Gx70KQELJD874Nr42Q6r29faaP3VEdPTcnMp8Iw5D3MTuXJGuO9CP_l8Eb-T-yojVBp58wZWjEdBHlAHic_d8j7SmIgefxG0r5TjNbmOns5RUb5QXjOo0LVxUi6oyFpk0sEulc9S1WJULoNf5NG2fMhUWDacQUTUcWRWQse8zP_VTg');"></div>
+</section>
+<!-- Section 7: Trust Signals Bar (Moved up for authority) -->
+<section class="bg-surface-container-low border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto py-8 px-8 flex flex-wrap justify-center md:justify-between items-center gap-8">
+<div class="flex items-center space-x-3 text-on-surface-variant group">
+<span class="material-symbols-outlined text-tertiary group-hover:scale-110 transition-transform">verified_user</span>
+<span class="font-sans text-sm uppercase tracking-widest font-semibold">Análisis independientes</span>
+</div>
+<div class="flex items-center space-x-3 text-on-surface-variant group">
+<span class="material-symbols-outlined text-tertiary group-hover:scale-110 transition-transform">update</span>
+<span class="font-sans text-sm uppercase tracking-widest font-semibold">Actualizado 2025</span>
+</div>
+<div class="flex items-center space-x-3 text-on-surface-variant group">
+<span class="material-symbols-outlined text-tertiary group-hover:scale-110 transition-transform">star</span>
+<span class="font-sans text-sm uppercase tracking-widest font-semibold">Recomendaciones verificadas</span>
+</div>
+</div>
+</section>
+<!-- Section 3: Featured Articles -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<article class="group bg-surface-container-lowest shadow-[0_20px_40px_rgba(2,36,72,0.03)] hover:shadow-[0_20px_40px_rgba(2,36,72,0.08)] transition-all duration-500 relative">
+<div class="absolute top-0 left-0 w-12 h-[2px] bg-tertiary"></div>
+<img class="w-full h-64 object-cover" data-alt="high-end minimalist workspace with two laptops showing law firm management software interfaces in clean bright office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYkCAqTB1uatIkF3SfbNt71qOY0bxqTtFuWnwI1BtqQ6K67SakVlzHAtWtCfBF0l9DsT9Gnpw57TLLFwaMAr_JDquOqiKPetSJlk9dD6Bvlp87PF5tlkjsmLqSk14aSMsha-5z-4PLfJPntAUZOSyCbfIhheRicnO4lrPPMkwcEV9CwaY7LiHLV4eP4SsXhgzfZ0LutbqFl9486eKaVkcQTyMK2nUgi1irbu8hEVhNAaCxhPnnLXEBcIJVUsKr8dvHmTZCjLDpZw"/>
+<div class="p-8 space-y-4">
+<span class="text-xs font-sans font-bold uppercase tracking-widest text-tertiary">Software Gestión</span>
+<h3 class="text-2xl font-headline font-bold text-primary group-hover:text-primary-container transition-colors">Notion vs Clio: ¿Cuál elegir para tu despacho?</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Analizamos las dos plataformas líderes para determinar cuál se adapta mejor a una estructura jurídica moderna en 2025.</p>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group bg-surface-container-lowest shadow-[0_20px_40px_rgba(2,36,72,0.03)] hover:shadow-[0_20px_40px_rgba(2,36,72,0.08)] transition-all duration-500 relative">
+<div class="absolute top-0 left-0 w-12 h-[2px] bg-tertiary"></div>
+<img class="w-full h-64 object-cover" data-alt="professional luxury leather briefcase next to a sleek modern laptop and fountain pen on a polished mahogany desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2dj-DhLalBRs0Elw34OWjaTu8dyhcT2eIgOjKF-yIJU9L3icNXdK4vMmc_o0a8G1wm6vMz6FfC9efugPyJ141xVPRt_p3cO8zlYZx5qBXRyY2rxLs3YF5YIMb_pJWSbtPO-wYo2E_rBPVK0zecAtb5dLoabW-mjx1xgh6f1YITt06KB6QiTLTqAJSn8Ma7A6pc3vcdlIoXE-dQLXSCPHNtkVKYmWTYv2m4RISpWrPljUOwfwYk0kAYpyZPo82700ki8u16cJyZQ"/>
+<div class="p-8 space-y-4">
+<span class="text-xs font-sans font-bold uppercase tracking-widest text-tertiary">Hardware</span>
+<h3 class="text-2xl font-headline font-bold text-primary group-hover:text-primary-container transition-colors">Las 7 mejores laptops para abogados en 2025</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Potencia, seguridad y portabilidad. Los equipos que garantizan que tu oficina esté donde tú estés.</p>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group bg-surface-container-lowest shadow-[0_20px_40px_rgba(2,36,72,0.03)] hover:shadow-[0_20px_40px_rgba(2,36,72,0.08)] transition-all duration-500 relative">
+<div class="absolute top-0 left-0 w-12 h-[2px] bg-tertiary"></div>
+<img class="w-full h-64 object-cover" data-alt="close-up of a high-resolution tablet screen showing organized calendar and task management apps for legal professionals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbfsjozFiKA9TOx_B9i5sbeyWOWS9FyPCtK8RllkcAKb-9B071maFEOw1luH6v4Zn9niOeg_p4HWv_ydeLqFLWcVtpV_-sL-2Rs8vYr0QO8ovTq-mhUCIo77_7mUfNn79yh6umlbMnECmcmrOYFEVHfn7GF-BOxPYVZTy8ygEPadR5xk6NOr2GbtXgAXAR0D3rQBAPfRF3HGcEyLhutDpqAey5E78ZzHyFs3PEGPayNdBN62vFWvDnfoLtR_z3JaFVGEVNvxvnKg"/>
+<div class="p-8 space-y-4">
+<span class="text-xs font-sans font-bold uppercase tracking-widest text-tertiary">Productividad</span>
+<h3 class="text-2xl font-headline font-bold text-primary group-hover:text-primary-container transition-colors">Apps indispensables para organización de casos</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Herramientas digitales que eliminan el caos administrativo y te permiten centrarte en la estrategia legal.</p>
+</div>
+</article>
+</div>
+</section>
+<!-- Section 4: Categories Navigation -->
+<section class="py-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-wrap justify-center gap-4">
+<button class="px-8 py-3 rounded-full bg-surface-container-lowest text-primary font-semibold hover:bg-primary hover:text-on-primary transition-all duration-300 shadow-sm">Software Gestión</button>
+<button class="px-8 py-3 rounded-full bg-surface-container-lowest text-primary font-semibold hover:bg-primary hover:text-on-primary transition-all duration-300 shadow-sm">Hardware</button>
+<button class="px-8 py-3 rounded-full bg-surface-container-lowest text-primary font-semibold hover:bg-primary hover:text-on-primary transition-all duration-300 shadow-sm">Productividad</button>
+<button class="px-8 py-3 rounded-full bg-surface-container-lowest text-primary font-semibold hover:bg-primary hover:text-on-primary transition-all duration-300 shadow-sm">IA Legal</button>
+</div>
+</div>
+</section>
+<!-- Section 5: Newsletter Lead Magnet -->
+<section class="py-24 px-8 bg-primary-container text-on-primary relative overflow-hidden">
+<div class="max-w-4xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<h2 class="text-4xl font-headline font-bold leading-tight">Guía: 10 Herramientas Indispensables para Despachos 2025</h2>
+<p class="text-on-primary-container text-lg">Únete a nuestra comunidad de más de 5,000 abogados que ya están transformando su práctica con tecnología de vanguardia.</p>
+</div>
+<div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-white/10">
+<form class="space-y-4">
+<input class="w-full px-6 py-4 bg-white/10 border-white/20 rounded-lg text-white placeholder:text-white/40 focus:bg-white/20 transition-all outline-none" placeholder="Email corporativo" type="email"/>
+<button class="w-full bg-tertiary hover:bg-tertiary-container text-on-tertiary font-bold py-4 rounded-lg transition-transform active:scale-95">Descargar Guía Gratis</button>
+</form>
+</div>
+</div>
+<!-- Decorative circle -->
+<div class="absolute -right-24 -bottom-24 w-96 h-96 bg-tertiary/10 rounded-full blur-3xl"></div>
+</section>
+<!-- Section 6: Latest Posts List -->
+<section class="py-24 px-8 max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
+<div class="md:col-span-2 space-y-12">
+<h2 class="text-3xl font-headline font-bold text-primary border-b border-outline-variant/20 pb-4">Lo Último en LexEditorial</h2>
+<!-- List Item 1 -->
+<div class="flex flex-col md:flex-row gap-8 group cursor-pointer">
+<div class="md:w-48 h-32 flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="close-up of electronic signature on a tablet with a digital pen in a legal setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy5cRtN9vKTJEzq7Ucr9KtWSb9vi1gRO0Ret95T1M5z50cF-CgReKfhQLXyu5XfxYXZ-bXJst5oSAcDy8WKJApiYah84NkO0jnDjyWB3TVgSlWmiGMFiPe3H2twqQnE5T0HohOM_TPWIQOd9GP3EZo5B7ebzOSvrkTXoUYmv4OyJJRgYVnFTXwbbt_Aa20jy9Fw_blEhYMup0T_97xIewP_LdIv5WgJ_NDDjjBhldCUelu-3kPZUYUv-C-vru9GZFuSdODPtrLOw"/>
+</div>
+<div class="space-y-2">
+<div class="flex items-center space-x-4 text-xs font-sans uppercase tracking-widest text-outline">
+<span>IA Legal</span>
+<span>•</span>
+<span>5 min lectura</span>
+</div>
+<h3 class="text-xl font-headline font-bold text-primary group-hover:text-tertiary transition-colors">Cómo implementar ChatGPT en la redacción de contratos sin riesgos</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">Protocolos de seguridad y prompts específicos para asegurar la validez jurídica de tus borradores generados por IA.</p>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex flex-col md:flex-row gap-8 group cursor-pointer">
+<div class="md:w-48 h-32 flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="professional high-speed document scanner in a modern law office with stacks of paper being digitized" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9hcfyWAfcoXepsUY_dmZtm8g8193IsqMvaqnF2G9L6SJ5vyTqeWg637jtGanbM2Xdkwvr4lLuoWswxFxwMlMpU2WYwP6w8WaSF9cJgvqPcoeYfATqKQdJ9-Y7uc98Z1j_EHwft2ZL_tEuXlw0cnlYMBzh_DIuBU7DvbFy9MHPuauzh306em8FPJLnON_h_w5VICvhCf6gVZibXnK8Csx0HbkzwtL3dhTHnCsbeXWDHJdQEh3Q19k4Npe538ay9oMT3OGxaA05-w"/>
+</div>
+<div class="space-y-2">
+<div class="flex items-center space-x-4 text-xs font-sans uppercase tracking-widest text-outline">
+<span>Hardware</span>
+<span>•</span>
+<span>8 min lectura</span>
+</div>
+<h3 class="text-xl font-headline font-bold text-primary group-hover:text-tertiary transition-colors">Escáneres de alta velocidad: La guía definitiva para el despacho sin papel</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">Comparativa técnica de los modelos Fujitsu y Brother para digitalización masiva de expedientes judiciales.</p>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex flex-col md:flex-row gap-8 group cursor-pointer">
+<div class="md:w-48 h-32 flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="top view of organized desk with calendar, notebook and mobile devices for legal productivity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKbJol_skLbiob_akEIRuk-2zAyaDq8SLuN0D_E4TpHV5t-LWKogEAZgEbUtadNYW6R9XUMzV3mkCASxSuCEYbRx4kYNoS8cQlUPPtUCmvEbxRRa7Uh3-ppErQkSUE5OVU5bCPBLWnXYA4OQdPYKCBunxKKeiOQAIAXt7GZ24OEb1AdJfUQm7mu8oz97jHff3zZBigmqsZiK2RwIVmO0ttWySTX0aa__To7QLm2VZIuIZZy4Kfwi0clzKJzCYuKmRH1zd1zUF2zg"/>
+</div>
+<div class="space-y-2">
+<div class="flex items-center space-x-4 text-xs font-sans uppercase tracking-widest text-outline">
+<span>Productividad</span>
+<span>•</span>
+<span>4 min lectura</span>
+</div>
+<h3 class="text-xl font-headline font-bold text-primary group-hover:text-tertiary transition-colors">Técnica Pomodoro para Abogados: Gestionando el Deep Work</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">Cómo dividir el tiempo entre audiencias, estudio de casos y redacción para maximizar la facturación horaria.</p>
+</div>
+</div>
+</div>
+<!-- Sidebar -->
+<aside class="space-y-12">
+<div class="bg-surface-container-low p-8">
+<h4 class="text-lg font-headline font-bold text-primary mb-6">Populares ahora</h4>
+<ul class="space-y-6">
+<li class="flex gap-4 group cursor-pointer">
+<span class="text-3xl font-headline italic text-outline-variant font-bold">01</span>
+<p class="text-sm font-semibold group-hover:text-tertiary transition-colors">Mejores monitores ultra-wide para revisión de documentos.</p>
+</li>
+<li class="flex gap-4 group cursor-pointer">
+<span class="text-3xl font-headline italic text-outline-variant font-bold">02</span>
+<p class="text-sm font-semibold group-hover:text-tertiary transition-colors">Seguridad biométrica: Protegiendo el secreto profesional.</p>
+</li>
+<li class="flex gap-4 group cursor-pointer">
+<span class="text-3xl font-headline italic text-outline-variant font-bold">03</span>
+<p class="text-sm font-semibold group-hover:text-tertiary transition-colors">Cámaras 4K para vistas judiciales telemáticas.</p>
+</li>
+</ul>
+</div>
+</aside>
+</section>
+</main>
+<!-- Section 8: Footer -->
+<footer class="bg-[#f3f4f5] dark:bg-slate-900 w-full py-16 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="md:col-span-2 space-y-6">
+<div class="text-lg font-serif font-bold text-[#022448] dark:text-slate-100">LexEditorial</div>
+<p class="text-slate-500 dark:text-slate-400 max-w-xs text-sm">Elevando el estándar de la práctica jurídica a través de la tecnología y la eficiencia digital.</p>
+<div class="flex space-x-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">rss_feed</span></a>
+</div>
+</div>
+<div class="space-y-4">
+<h5 class="text-xs font-sans font-bold uppercase tracking-widest text-primary">Navegación</h5>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#022448] dark:hover:text-slate-200 text-sm hover:translate-x-1 transition-transform" href="#">Software</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#022448] dark:hover:text-slate-200 text-sm hover:translate-x-1 transition-transform" href="#">Hardware</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#022448] dark:hover:text-slate-200 text-sm hover:translate-x-1 transition-transform" href="#">Productividad</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-xs font-sans font-bold uppercase tracking-widest text-primary">Legal</h5>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#022448] dark:hover:text-slate-200 text-sm hover:translate-x-1 transition-transform" href="#">Affiliate Disclosure</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#022448] dark:hover:text-slate-200 text-sm hover:translate-x-1 transition-transform" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#022448] dark:hover:text-slate-200 text-sm hover:translate-x-1 transition-transform" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-200 dark:border-slate-800 space-y-4">
+<p class="text-slate-400 text-[10px] leading-relaxed max-w-3xl">
+                    ADVERTENCIA DE AFILIACIÓN: Algunos enlaces en este sitio son de afiliados. Esto significa que podemos recibir una comisión si decides realizar una compra a través de ellos, sin costo adicional para ti. Esto nos permite mantener la independencia editorial y seguir ofreciendo contenido de alta calidad.
+                </p>
+<div class="flex justify-between items-center">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-sans uppercase tracking-widest">© 2024 LexEditorial. Premium Legal Insights.</p>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
