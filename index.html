@@ -121,12 +121,13 @@
 <p class="text-xl md:text-2xl text-on-surface-variant font-light max-w-2xl mx-auto">
                     Optimiza tu tiempo y escala tu despacho con las mejores herramientas del mercado.
                 </p>
-<div class="mt-12 bg-surface-container-lowest p-2 rounded-xl shadow-[0_20px_40px_rgba(2,36,72,0.05)] flex flex-col md:flex-row gap-4 max-w-xl mx-auto outline-variant/15 outline outline-1">
-<input class="flex-grow px-6 py-4 bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline italic" placeholder="Tu correo profesional" type="email"/>
-<button class="bg-tertiary hover:bg-tertiary-container text-on-tertiary px-8 py-4 font-bold transition-all duration-300 whitespace-nowrap">
+<form action="https://formspree.io/f/mnqevzvl" method="POST" class="mt-12 bg-surface-container-lowest p-2 rounded-xl shadow-[0_20px_40px_rgba(2,36,72,0.05)] flex flex-col md:flex-row gap-4 max-w-xl mx-auto outline-variant/15 outline outline-1">
+<input name="email" class="flex-grow px-6 py-4 bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline italic" placeholder="Tu correo profesional" type="email" required/>
+<input type="hidden" name="_subject" value="Nuevo suscriptor LexEditorial"/>
+<button type="submit" class="bg-tertiary hover:bg-tertiary-container text-on-tertiary px-8 py-4 font-bold transition-all duration-300 whitespace-nowrap">
                         Recibir Guías Gratuitas
                     </button>
-</div>
+</form>
 </div>
 <!-- Decorative Subtle Pattern -->
 <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCymh9a7huF-R0WfnVkVr8BbIMv9Ma3Nam9zIy3-WL2RSQN1PpIjiNcu6PVIiEO01trSCX-LHH4C7WQvUMobT6WBi5Aspq8Gx70KQELJD874Nr42Q6r29faaP3VEdPTcnMp8Iw5D3MTuXJGuO9CP_l8Eb-T-yojVBp58wZWjEdBHlAHic_d8j7SmIgefxG0r5TjNbmOns5RUb5QXjOo0LVxUi6oyFpk0sEulc9S1WJULoNf5NG2fMhUWDacQUTUcWRWQse8zP_VTg');"></div>
@@ -202,9 +203,10 @@
 <p class="text-on-primary-container text-lg">Únete a nuestra comunidad de más de 5,000 abogados que ya están transformando su práctica con tecnología de vanguardia.</p>
 </div>
 <div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-white/10">
-<form class="space-y-4">
-<input class="w-full px-6 py-4 bg-white/10 border-white/20 rounded-lg text-white placeholder:text-white/40 focus:bg-white/20 transition-all outline-none" placeholder="Email corporativo" type="email"/>
-<button class="w-full bg-tertiary hover:bg-tertiary-container text-on-tertiary font-bold py-4 rounded-lg transition-transform active:scale-95">Descargar Guía Gratis</button>
+<form action="https://formspree.io/f/mnqevzvl" method="POST" class="space-y-4">
+<input name="email" class="w-full px-6 py-4 bg-white/10 border-white/20 rounded-lg text-white placeholder:text-white/40 focus:bg-white/20 transition-all outline-none" placeholder="Email corporativo" type="email" required/>
+<input type="hidden" name="_subject" value="Descarga guía LexEditorial"/>
+<button type="submit" class="w-full bg-tertiary hover:bg-tertiary-container text-on-tertiary font-bold py-4 rounded-lg transition-transform active:scale-95">Descargar Guía Gratis</button>
 </form>
 </div>
 </div>
