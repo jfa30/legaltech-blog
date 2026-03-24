@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>¡Gracias por suscribirte! | LexEditorial</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#022448",
+              "tertiary": "#735c00",
+              "surface": "#f8f9fa",
+              "on-surface": "#191c1d"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col">
+
+<!-- Header -->
+<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-xl shadow-sm">
+  <nav class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+    <a href="index.html" class="text-2xl font-serif font-bold tracking-tight text-[#022448] dark:text-slate-100">
+      LexEditorial
+    </a>
+    <div class="flex items-center space-x-4">
+      <button id="dark-mode-toggle" class="text-[#022448] dark:text-slate-100 hover:text-[#d4af37] transition-all">
+        <span class="material-symbols-outlined">dark_mode</span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Content -->
+<main class="flex-grow flex items-center justify-center py-16 px-8">
+  <div class="max-w-2xl mx-auto text-center">
+    
+    <div class="w-24 h-24 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-8">
+      <span class="material-symbols-outlined text-5xl text-green-600">check_circle</span>
+    </div>
+    
+    <h1 class="text-4xl md:text-5xl font-headline font-bold text-primary mb-6">
+      ¡Gracias por suscribirte!
+    </h1>
+    
+    <p class="text-xl text-slate-600 dark:text-slate-400 mb-8">
+      Hemos recibido tu email correctamente. Pronto recibirás nuestras guías y análisis de tecnología legal.
+    </p>
+    
+    <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-xl mb-8">
+      <h3 class="font-bold mb-2">📧 ¿Qué sigue?</h3>
+      <ul class="text-left text-slate-600 dark:text-slate-400 space-y-2">
+        <li>✓ Revisa tu bandeja de entrada (y spam por si acaso)</li>
+        <li>✓ Confirma tu suscripción si te pedimos validación</li>
+        <li>✓ Recibirás contenido exclusivo sobre herramientas legales</li>
+      </ul>
+    </div>
+    
+    <a href="index.html" class="inline-block bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary/90 transition-colors">
+      ← Volver al inicio
+    </a>
+    
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-900 py-8">
+  <div class="max-w-4xl mx-auto px-8 text-center">
+    <p class="text-xs text-slate-400">
+      © 2025 LexEditorial. Análisis independientes de tecnología legal.
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
