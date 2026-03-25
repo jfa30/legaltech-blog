@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jfa30.github.io/legaltech-blog/sitemap.xml

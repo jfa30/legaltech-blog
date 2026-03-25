@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://jfa30.github.io/legaltech-blog/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://jfa30.github.io/legaltech-blog/articulos.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jfa30.github.io/legaltech-blog/notion-vs-clio.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jfa30.github.io/legaltech-blog/mejores-laptops-abogados.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jfa30.github.io/legaltech-blog/mejores-tabletas-abogados.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jfa30.github.io/legaltech-blog/gracias.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>
