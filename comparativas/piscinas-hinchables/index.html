@@ -21,43 +21,48 @@
 </script>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:'Segoe UI',system-ui,sans-serif; background:#f8f9fa; color:#333; }
-  .container { max-width:1200px; margin:0 auto; padding:0 20px; }
-  header { background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:white; padding:50px 0; text-align:center; }
-  header h1 { font-size:2.2em; margin-bottom:10px; }
-  header p { font-size:1.1em; opacity:.9; max-width:700px; margin:0 auto; }
-  .ad-slot { background:#e9ecef; border:2px dashed #adb5bd; text-align:center; padding:25px; margin:25px 0; border-radius:8px; color:#6c757d; font-size:.9em; }
-  .content { background:white; padding:40px; border-radius:12px; margin:30px 0; box-shadow:0 4px 15px rgba(0,0,0,.1); }
-  .content h2 { color:#667eea; margin-bottom:20px; font-size:1.5em; }
-  .product-card { display:flex; gap:25px; background:#f8f9fa; padding:25px; border-radius:12px; margin-bottom:20px; transition:transform .3s; }
-  .product-card:hover { transform:translateY(-3px); box-shadow:0 4px 12px rgba(0,0,0,.1); }
-  .product-rank { width:40px; height:40px; background:#667eea; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0; }
-  .product-card img { width:150px; height:150px; object-fit:contain; border-radius:8px; flex-shrink:0; }
-  .product-content { flex:1; }
-  .product-content h3 { font-size:1.2em; margin-bottom:10px; color:#2d3436; }
-  .rating { color:#ffa502; margin-bottom:10px; }
-  .specs { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
-  .specs span { background:#e9ecef; padding:4px 12px; border-radius:20px; font-size:.85em; color:#495057; }
-  .price-row { display:flex; align-items:center; gap:15px; margin-top:15px; flex-wrap:wrap; }
-  .price { font-size:1.6em; font-weight:700; color:#e17055; }
-  .cta-btn { background:#00b894; color:white; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:600; transition:background .3s; }
-  .cta-btn:hover { background:#00a383; }
-  .vs-section { background:#fff3e0; border:2px solid #ffcc80; border-radius:12px; padding:25px; margin:25px 0; }
+  body { font-family:'Segoe UI',system-ui,sans-serif; background:#0f0f0f; color:#e0e0e0; }
+  .container { max-width:1100px; margin:0 auto; padding:0 20px; }
+  header { background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%); padding:60px 0; text-align:center; border-bottom:3px solid #e94560; }
+  header h1 { font-size:2.4em; color:#fff; margin-bottom:15px; }
+  header p { font-size:1.1em; color:#a0a0a0; max-width:600px; margin:0 auto; }
+  .ad-slot { background:#1a1a2e; border:2px dashed #333; padding:20px; margin:20px 0; text-align:center; color:#666; border-radius:8px; }
+  .content { padding:40px 0; }
+  .content h2 { color:#e94560; margin-bottom:25px; font-size:1.8em; }
+  .product-card { background:#1a1a2e; border-radius:16px; overflow:hidden; margin-bottom:25px; display:flex; transition:all .3s; border:1px solid #2a2a4a; }
+  .product-card:hover { transform:translateY(-5px); box-shadow:0 10px 30px rgba(233,69,96,.15); border-color:#e94560; }
+  .product-img { position:relative; width:280px; flex-shrink:0; background:#fff; display:flex; align-items:center; justify-content:center; padding:20px; }
+  .product-img img { max-width:100%; max-height:220px; object-fit:contain; }
+  .rank { position:absolute; top:15px; left:15px; width:36px; height:36px; background:#e94560; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.1em; }
+  .product-info { padding:30px; flex:1; }
+  .product-info h3 { font-size:1.3em; color:#fff; margin-bottom:10px; }
+  .stars { color:#ffd700; margin-bottom:12px; font-size:.95em; }
+  .stars span { color:#888; margin-left:8px; }
+  .desc { color:#b0b0b0; margin-bottom:12px; line-height:1.6; }
+  .long-desc { background:#0f0f0f; padding:15px; border-radius:8px; margin-bottom:15px; color:#c0c0c0; line-height:1.7; font-size:.95em; border-left:3px solid #e94560; }
+  .specs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+  .specs span { background:#2a2a4a; color:#a0a0ff; padding:5px 14px; border-radius:20px; font-size:.85em; }
+  .bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:15px; }
+  .price { font-size:1.8em; font-weight:700; color:#e94560; }
+  .cta { background:#e94560; color:#fff; padding:14px 28px; border-radius:8px; text-decoration:none; font-weight:600; transition:all .3s; }
+  .cta:hover { background:#ff6b6b; transform:scale(1.05); }
+  .vs-section { background:#fff3e0; border:2px solid #ffcc80; border-radius:12px; padding:25px; margin:25px 0; color:#333; }
   .vs-section h3 { color:#e17055; margin-bottom:15px; }
   .vs-table { width:100%; border-collapse:collapse; margin-bottom:15px; }
   .vs-table th { background:#667eea; color:white; padding:12px; text-align:left; }
   .vs-table td { padding:12px; border-bottom:1px solid #dee2e6; }
-  details { background:#f8f9fa; border-radius:8px; padding:15px; margin-bottom:10px; }
-  summary { font-weight:600; cursor:pointer; color:#667eea; }
-  footer { background:#2d3436; color:white; text-align:center; padding:30px 0; margin-top:40px; }
-  footer p { font-size:.85em; opacity:.7; max-width:700px; margin:0 auto 10px; }
-  @media(max-width:768px){ .product-card{flex-direction:column} .product-card img{width:100%;height:auto} header h1{font-size:1.6em} }
+  details { background:#1a1a2e; border-radius:8px; padding:15px; margin-bottom:10px; border:1px solid #2a2a4a; }
+  summary { font-weight:600; cursor:pointer; color:#e94560; }
+  details p { color:#b0b0b0; margin-top:10px; line-height:1.6; }
+  footer { background:#0a0a0a; text-align:center; padding:30px 0; margin-top:40px; color:#555; }
+  footer a { color:#e94560; }
+  @media(max-width:768px){ .product-card{flex-direction:column} .product-img{width:100%;height:200px} header h1{font-size:1.7em} }
 </style>
 </head>
 <body>
 <header>
   <div class="container">
-    <h1>🏆 Mejores Piscinas Hinchables 2026</h1>
+    <h1>Mejores Piscinas Hinchables 2026</h1>
     <p>Verano en casa sin gastar una fortuna. Piscinas hinchables para jardín, terraza y patio.</p>
   </div>
 </header>
@@ -69,124 +74,94 @@
   </div>
   <div class="content">
     <h2>🔥 Top 5 recomendados</h2>
-    <p>El verano español exige agua. Una piscina hinchable cuesta entre 20€ y 150€ y da meses de diversión. Aquí las mejores opciones por durabilidad, tamaño y precio.</p>
+    <p style="color:#888;margin-bottom:30px;">El verano español exige agua. Una piscina hinchable cuesta entre 20€ y 150€ y da meses de diversión. Aquí las mejores opciones por durabilidad, tamaño y precio.</p>
     
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <div class="product-rank">#1</div>
-      <img itemprop="image" src="https://m.media-amazon.com/images/I/81+k4Z6+JYL._AC_UL320_.jpg" alt="Intex Easy Set 305x76cm" loading="lazy">
-      <div class="product-content">
-        <h3 itemprop="name">Intex Easy Set 305x76cm</h3>
-        <div class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-          <span class="stars">★★★★☆</span>
-          <span itemprop="ratingValue">4.0</span>/5
-          <meta itemprop="reviewCount" content="3840">
-        </div>
-        <p itemprop="description">La clásica que nunca falla. 3856 litros, montaje en 10 minutos. El anillo superior se hincha solo con el agua. Incluye filtro.</p>
-        <div class="specs">
-          <span>3856L</span><span>305x76cm</span><span>10 min</span><span>Filtro</span>
-        </div>
-        <div class="price-row">
-          <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="priceCurrency" content="EUR"></span>
-            <span itemprop="price" content="59">59€</span>
-          </span>
-          <a href="https://www.amazon.es/dp/B00005QBX8?tag=lexeditorial-21" class="cta-btn" target="_blank" rel="sponsored nofollow">🔥 Ver Precio en Amazon →</a>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://m.media-amazon.com/images/I/81+k4Z6+JYL._AC_UL320_.jpg" alt="Intex Easy Set 305x76cm" loading="lazy">
+        <div class="rank">#1</div>
+      </div>
+      <div class="product-info">
+        <h3>Intex Easy Set 305x76cm</h3>
+        <div class="stars">★★★★☆ <span>(3840 opiniones)</span></div>
+        <p class="desc">La clásica que nunca falla. 3856 litros, montaje en 10 minutos. El anillo superior se hincha solo con el agua. Incluye filtro.</p>
+        <div class="long-desc">Intex es la marca líder mundial en piscinas hinchables por una razón: fiabilidad. El Easy Set de 305x76cm es el modelo más vendido en España durante años. El anillo superior se hincha automáticamente al llenar con agua — no necesitas bomba. 3856 litros son suficientes para 2 adultos + 2 niños. Incluye bomba de filtro de cartucho, escalera y tapiz de suelo. PVC triple capa resistente a pinchazos. Duración real: 3-5 veranos con cuidado.</div>
+        <div class="specs"><span>3856L</span><span>305x76cm</span><span>10 min</span><span>Filtro</span></div>
+        <div class="bottom">
+          <span class="price">59€</span>
+          <a href="https://www.amazon.es/dp/B00005QBX8?tag=lexeditorial-21" class="cta" target="_blank" rel="sponsored nofollow">Ver en Amazon →</a>
         </div>
       </div>
     </div>
 
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <div class="product-rank">#2</div>
-      <img itemprop="image" src="https://m.media-amazon.com/images/I/71+nL5+0KJL._AC_UL320_.jpg" alt="Bestway Steel Pro 305x76cm" loading="lazy">
-      <div class="product-content">
-        <h3 itemprop="name">Bestway Steel Pro 305x76cm</h3>
-        <div class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-          <span class="stars">★★★★☆</span>
-          <span itemprop="ratingValue">4.0</span>/5
-          <meta itemprop="reviewCount" content="2150">
-        </div>
-        <p itemprop="description">Estructura metálica superior a Intex. Paredes más rígidas, menos deformación. Filtro de cartucho incluido. Mejor durabilidad.</p>
-        <div class="specs">
-          <span>4678L</span><span>305x76cm</span><span>Steel Pro</span><span>Filtro</span>
-        </div>
-        <div class="price-row">
-          <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="priceCurrency" content="EUR"></span>
-            <span itemprop="price" content="79">79€</span>
-          </span>
-          <a href="https://www.amazon.es/dp/B07CQ9J1XJ?tag=lexeditorial-21" class="cta-btn" target="_blank" rel="sponsored nofollow">🔥 Ver Precio en Amazon →</a>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://m.media-amazon.com/images/I/71+nL5+0KJL._AC_UL320_.jpg" alt="Bestway Steel Pro 305x76cm" loading="lazy">
+        <div class="rank">#2</div>
+      </div>
+      <div class="product-info">
+        <h3>Bestway Steel Pro 305x76cm</h3>
+        <div class="stars">★★★★☆ <span>(2150 opiniones)</span></div>
+        <p class="desc">Estructura metálica superior a Intex. Paredes más rígidas, menos deformación. Filtro de cartucho incluido. Mejor durabilidad.</p>
+        <div class="long-desc">Bestway Steel Pro aporta algo que Intex no tiene: estructura metálica tubular. Las paredes laterales son rígidas, no se deforman con el uso ni con el sol. 4678 litros de capacidad real y PVC triple capa anti-pinchazos. El filtro de cartucho incluido mantiene el agua limpia 3-5 días sin cloro. Si buscas durabilidad y no quieres reemplazarla cada 2 años, este es tu modelo.</div>
+        <div class="specs"><span>4678L</span><span>305x76cm</span><span>Steel Pro</span><span>Filtro</span></div>
+        <div class="bottom">
+          <span class="price">79€</span>
+          <a href="https://www.amazon.es/dp/B07CQ9J1XJ?tag=lexeditorial-21" class="cta" target="_blank" rel="sponsored nofollow">Ver en Amazon →</a>
         </div>
       </div>
     </div>
 
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <div class="product-rank">#3</div>
-      <img itemprop="image" src="https://m.media-amazon.com/images/I/81+k4Z6+JYL._AC_UL320_.jpg" alt="Intex Metal Frame 366x76cm" loading="lazy">
-      <div class="product-content">
-        <h3 itemprop="name">Intex Metal Frame 366x76cm</h3>
-        <div class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-          <span class="stars">★★★★★</span>
-          <span itemprop="ratingValue">5.0</span>/5
-          <meta itemprop="reviewCount" content="1680">
-        </div>
-        <p itemprop="description">Mayor capacidad con estructura metálica. 6503 litros para toda la familia. Escalera y tapiz de suelo incluidos.</p>
-        <div class="specs">
-          <span>6503L</span><span>366x76cm</span><span>Escalera</span><span>Tapiz</span>
-        </div>
-        <div class="price-row">
-          <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="priceCurrency" content="EUR"></span>
-            <span itemprop="price" content="129">129€</span>
-          </span>
-          <a href="https://www.amazon.es/dp/B07W7QJ5XK?tag=lexeditorial-21" class="cta-btn" target="_blank" rel="sponsored nofollow">🔥 Ver Precio en Amazon →</a>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://m.media-amazon.com/images/I/81+k4Z6+JYL._AC_UL320_.jpg" alt="Intex Metal Frame 366x76cm" loading="lazy">
+        <div class="rank">#3</div>
+      </div>
+      <div class="product-info">
+        <h3>Intex Metal Frame 366x76cm</h3>
+        <div class="stars">★★★★★ <span>(1680 opiniones)</span></div>
+        <p class="desc">Mayor capacidad con estructura metálica. 6503 litros para toda la familia. Escalera y tapiz de suelo incluidos.</p>
+        <div class="long-desc">Cuando necesitas espacio para toda la familia, el Metal Frame de 366cm es la respuesta. 6503 litros permiten nadar de verdad, no solo refrescarte. Estructura metálica cuadrada que no se tambalea. Escalera resistente incluida para entrada segura. Tapiz de suelo que protege el PVC del roce con el suelo. Tiempo de llenado: 3-4 horas con manguera estándar. Ideal para jardines medianos y grandes.</div>
+        <div class="specs"><span>6503L</span><span>366x76cm</span><span>Escalera</span><span>Tapiz</span></div>
+        <div class="bottom">
+          <span class="price">129€</span>
+          <a href="https://www.amazon.es/dp/B07W7QJ5XK?tag=lexeditorial-21" class="cta" target="_blank" rel="sponsored nofollow">Ver en Amazon →</a>
         </div>
       </div>
     </div>
 
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <div class="product-rank">#4</div>
-      <img itemprop="image" src="https://m.media-amazon.com/images/I/71+nL5+0KJL._AC_UL320_.jpg" alt="Bestway Fast Set 244x66cm" loading="lazy">
-      <div class="product-content">
-        <h3 itemprop="name">Bestway Fast Set 244x66cm</h3>
-        <div class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-          <span class="stars">★★★☆☆</span>
-          <span itemprop="ratingValue">3.0</span>/5
-          <meta itemprop="reviewCount" content="980">
-        </div>
-        <p itemprop="description">Opción compacta y barata. 2300 litros, ideal para niños o espacios pequeños. Se monta en 5 minutos.</p>
-        <div class="specs">
-          <span>2300L</span><span>244x66cm</span><span>5 min</span><span>Filtro</span>
-        </div>
-        <div class="price-row">
-          <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="priceCurrency" content="EUR"></span>
-            <span itemprop="price" content="35">35€</span>
-          </span>
-          <a href="https://www.amazon.es/dp/B07CQ9J1XK?tag=lexeditorial-21" class="cta-btn" target="_blank" rel="sponsored nofollow">🔥 Ver Precio en Amazon →</a>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://m.media-amazon.com/images/I/71+nL5+0KJL._AC_UL320_.jpg" alt="Bestway Fast Set 244x66cm" loading="lazy">
+        <div class="rank">#4</div>
+      </div>
+      <div class="product-info">
+        <h3>Bestway Fast Set 244x66cm</h3>
+        <div class="stars">★★★☆☆ <span>(980 opiniones)</span></div>
+        <p class="desc">Opción compacta y barata. 2300 litros, ideal para niños o espacios pequeños. Se monta en 5 minutos.</p>
+        <div class="long-desc">No todo el mundo tiene jardín grande. La Fast Set de 244cm es la solución para patios pequeños, terrazas amplias o niños pequeños. 2300 litros son suficientes para 2 niños o 1 adulto. Se monta en 5 minutos: despliegas, subes el anillo y listo. Incluye filtro de cartucho. Precio imbatible para probar si una piscina hinchable encaja en tu espacio antes de invertir más.</div>
+        <div class="specs"><span>2300L</span><span>244x66cm</span><span>5 min</span><span>Filtro</span></div>
+        <div class="bottom">
+          <span class="price">35€</span>
+          <a href="https://www.amazon.es/dp/B07CQ9J1XK?tag=lexeditorial-21" class="cta" target="_blank" rel="sponsored nofollow">Ver en Amazon →</a>
         </div>
       </div>
     </div>
 
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <div class="product-rank">#5</div>
-      <img itemprop="image" src="https://m.media-amazon.com/images/I/81+k4Z6+JYL._AC_UL320_.jpg" alt="Intex Ultra Frame 457x107cm" loading="lazy">
-      <div class="product-content">
-        <h3 itemprop="name">Intex Ultra Frame 457x107cm</h3>
-        <div class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-          <span class="stars">★★★★★</span>
-          <span itemprop="ratingValue">5.0</span>/5
-          <meta itemprop="reviewCount" content="750">
-        </div>
-        <p itemprop="description">La premium. 14.141 litros, altura real para nadar. Estructura tubular ultra resistente. Para quien quiere lo mejor.</p>
-        <div class="specs">
-          <span>14141L</span><span>457x107cm</span><span>Ultra Frame</span><span>Premium</span>
-        </div>
-        <div class="price-row">
-          <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="priceCurrency" content="EUR"></span>
-            <span itemprop="price" content="249">249€</span>
-          </span>
-          <a href="https://www.amazon.es/dp/B00005QBX9?tag=lexeditorial-21" class="cta-btn" target="_blank" rel="sponsored nofollow">🔥 Ver Precio en Amazon →</a>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://m.media-amazon.com/images/I/81+k4Z6+JYL._AC_UL320_.jpg" alt="Intex Ultra Frame 457x107cm" loading="lazy">
+        <div class="rank">#5</div>
+      </div>
+      <div class="product-info">
+        <h3>Intex Ultra Frame 457x107cm</h3>
+        <div class="stars">★★★★★ <span>(750 opiniones)</span></div>
+        <p class="desc">La premium. 14.141 litros, altura real para nadar. Estructura tubular ultra resistente. Para quien quiere lo mejor.</p>
+        <div class="long-desc">La Ultra Frame es la Rolls-Royce de las piscinas hinchables. 457cm de diámetro y 107cm de altura permiten nadar de verdad, sumergirse y jugar. 14.141 litros de capacidad para fiestas de verano. Estructura tubular cuadrada ultra resistente que soporta el uso intensivo. Incluye escalera, tapiz, cobertor y kit de mantenimiento. Si tienes espacio y buscas la mejor experiencia posible sin construir una piscina de obra, este es tu modelo.</div>
+        <div class="specs"><span>14141L</span><span>457x107cm</span><span>Ultra Frame</span><span>Premium</span></div>
+        <div class="bottom">
+          <span class="price">249€</span>
+          <a href="https://www.amazon.es/dp/B00005QBX9?tag=lexeditorial-21" class="cta" target="_blank" rel="sponsored nofollow">Ver en Amazon →</a>
         </div>
       </div>
     </div>
@@ -212,10 +187,10 @@
   </div>
   <div class="content">
     <h2>📖 Guía de Compra</h2>
-    <p>**Capacidad:** 2000L = 2 niños | 4000L = familia pequeña | 6000L+ = familia grande. Considera el espacio disponible.</p>
-<p>**Suelo:** Necesitas superficie nivelada. Una loseta de base o césped artificial protege el fondo de pinchazos.</p>
-<p>**Mantenimiento:** Filtro de cartucho + cloro. Limpia el filtro semanalmente. Cubierta reduce evaporación y suciedad.</p>
-<p>**Vaciado:** Todas incluyen válvula de drenaje. Conecta manguera de jardín para vaciar sin inundar.</p>
+    <p><strong>Capacidad:</strong> 2000L = 2 niños | 4000L = familia pequeña | 6000L+ = familia grande. Considera el espacio disponible.</p>
+<p><strong>Suelo:</strong> Necesitas superficie nivelada. Una loseta de base o césped artificial protege el fondo de pinchazos.</p>
+<p><strong>Mantenimiento:</strong> Filtro de cartucho + cloro. Limpia el filtro semanalmente. Cubierta reduce evaporación y suciedad.</p>
+<p><strong>Vaciado:</strong> Todas incluyen válvula de drenaje. Conecta manguera de jardín para vaciar sin inundar.</p>
   </div>
   <div class="ad-slot">
     <p>📢 Espacio Publicitario</p>
@@ -243,8 +218,8 @@
 </div>
 <footer>
   <div class="container">
-    <p>© 2026 Piscinas Hinchables España — Enlaces de afiliados. Ganamos comisión sin coste extra para ti.</p>
-    <p><a href="https://jfa30.github.io/legaltech-blog/" style="color:#667eea;">← Volver al inicio</a></p>
+    <p>© 2026 — Enlaces de afiliados. Ganamos comisión sin coste extra.</p>
+    <p><a href="https://jfa30.github.io/legaltech-blog/">← Volver al inicio</a></p>
   </div>
 </footer>
 </body>

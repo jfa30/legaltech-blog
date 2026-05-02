@@ -21,43 +21,48 @@
 </script>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:'Segoe UI',system-ui,sans-serif; background:#f8f9fa; color:#333; }
-  .container { max-width:1200px; margin:0 auto; padding:0 20px; }
-  header { background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:white; padding:50px 0; text-align:center; }
-  header h1 { font-size:2.2em; margin-bottom:10px; }
-  header p { font-size:1.1em; opacity:.9; max-width:700px; margin:0 auto; }
-  .ad-slot { background:#e9ecef; border:2px dashed #adb5bd; text-align:center; padding:25px; margin:25px 0; border-radius:8px; color:#6c757d; font-size:.9em; }
-  .content { background:white; padding:40px; border-radius:12px; margin:30px 0; box-shadow:0 4px 15px rgba(0,0,0,.1); }
-  .content h2 { color:#667eea; margin-bottom:20px; font-size:1.5em; }
-  .product-card { display:flex; gap:25px; background:#f8f9fa; padding:25px; border-radius:12px; margin-bottom:20px; transition:transform .3s; }
-  .product-card:hover { transform:translateY(-3px); box-shadow:0 4px 12px rgba(0,0,0,.1); }
-  .product-rank { width:40px; height:40px; background:#667eea; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0; }
-  .product-card img { width:150px; height:150px; object-fit:contain; border-radius:8px; flex-shrink:0; }
-  .product-content { flex:1; }
-  .product-content h3 { font-size:1.2em; margin-bottom:10px; color:#2d3436; }
-  .rating { color:#ffa502; margin-bottom:10px; }
-  .specs { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
-  .specs span { background:#e9ecef; padding:4px 12px; border-radius:20px; font-size:.85em; color:#495057; }
-  .price-row { display:flex; align-items:center; gap:15px; margin-top:15px; flex-wrap:wrap; }
-  .price { font-size:1.6em; font-weight:700; color:#e17055; }
-  .cta-btn { background:#00b894; color:white; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:600; transition:background .3s; }
-  .cta-btn:hover { background:#00a383; }
-  .vs-section { background:#fff3e0; border:2px solid #ffcc80; border-radius:12px; padding:25px; margin:25px 0; }
+  body { font-family:'Segoe UI',system-ui,sans-serif; background:#0f0f0f; color:#e0e0e0; }
+  .container { max-width:1100px; margin:0 auto; padding:0 20px; }
+  header { background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%); padding:60px 0; text-align:center; border-bottom:3px solid #e94560; }
+  header h1 { font-size:2.4em; color:#fff; margin-bottom:15px; }
+  header p { font-size:1.1em; color:#a0a0a0; max-width:600px; margin:0 auto; }
+  .ad-slot { background:#1a1a2e; border:2px dashed #333; padding:20px; margin:20px 0; text-align:center; color:#666; border-radius:8px; }
+  .content { padding:40px 0; }
+  .content h2 { color:#e94560; margin-bottom:25px; font-size:1.8em; }
+  .product-card { background:#1a1a2e; border-radius:16px; overflow:hidden; margin-bottom:25px; display:flex; transition:all .3s; border:1px solid #2a2a4a; }
+  .product-card:hover { transform:translateY(-5px); box-shadow:0 10px 30px rgba(233,69,96,.15); border-color:#e94560; }
+  .product-img { position:relative; width:280px; flex-shrink:0; background:#fff; display:flex; align-items:center; justify-content:center; padding:20px; }
+  .product-img img { max-width:100%; max-height:220px; object-fit:contain; }
+  .rank { position:absolute; top:15px; left:15px; width:36px; height:36px; background:#e94560; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.1em; }
+  .product-info { padding:30px; flex:1; }
+  .product-info h3 { font-size:1.3em; color:#fff; margin-bottom:10px; }
+  .stars { color:#ffd700; margin-bottom:12px; font-size:.95em; }
+  .stars span { color:#888; margin-left:8px; }
+  .desc { color:#b0b0b0; margin-bottom:12px; line-height:1.6; }
+  .long-desc { background:#0f0f0f; padding:15px; border-radius:8px; margin-bottom:15px; color:#c0c0c0; line-height:1.7; font-size:.95em; border-left:3px solid #e94560; }
+  .specs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+  .specs span { background:#2a2a4a; color:#a0a0ff; padding:5px 14px; border-radius:20px; font-size:.85em; }
+  .bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:15px; }
+  .price { font-size:1.8em; font-weight:700; color:#e94560; }
+  .cta { background:#e94560; color:#fff; padding:14px 28px; border-radius:8px; text-decoration:none; font-weight:600; transition:all .3s; }
+  .cta:hover { background:#ff6b6b; transform:scale(1.05); }
+  .vs-section { background:#fff3e0; border:2px solid #ffcc80; border-radius:12px; padding:25px; margin:25px 0; color:#333; }
   .vs-section h3 { color:#e17055; margin-bottom:15px; }
   .vs-table { width:100%; border-collapse:collapse; margin-bottom:15px; }
   .vs-table th { background:#667eea; color:white; padding:12px; text-align:left; }
   .vs-table td { padding:12px; border-bottom:1px solid #dee2e6; }
-  details { background:#f8f9fa; border-radius:8px; padding:15px; margin-bottom:10px; }
-  summary { font-weight:600; cursor:pointer; color:#667eea; }
-  footer { background:#2d3436; color:white; text-align:center; padding:30px 0; margin-top:40px; }
-  footer p { font-size:.85em; opacity:.7; max-width:700px; margin:0 auto 10px; }
-  @media(max-width:768px){ .product-card{flex-direction:column} .product-card img{width:100%;height:auto} header h1{font-size:1.6em} }
+  details { background:#1a1a2e; border-radius:8px; padding:15px; margin-bottom:10px; border:1px solid #2a2a4a; }
+  summary { font-weight:600; cursor:pointer; color:#e94560; }
+  details p { color:#b0b0b0; margin-top:10px; line-height:1.6; }
+  footer { background:#0a0a0a; text-align:center; padding:30px 0; margin-top:40px; color:#555; }
+  footer a { color:#e94560; }
+  @media(max-width:768px){ .product-card{flex-direction:column} .product-img{width:100%;height:200px} header h1{font-size:1.7em} }
 </style>
 </head>
 <body>
 <header>
   <div class="container">
-    <h1>🏆 Mejores Ventiladores Silenciosos 2026</h1>
+    <h1>Mejores Ventiladores Silenciosos 2026</h1>
     <p>Aire fresco sin ruido. Comparativa de ventiladores para dormir, trabajar y sobrevivir el verano español.</p>
   </div>
 </header>
@@ -69,124 +74,94 @@
   </div>
   <div class="content">
     <h2>🔥 Top 5 recomendados</h2>
-    <p>Dormir con calor es imposible. Un ventilador silencioso (<40 dB) marca la diferencia entre una noche de descanso y un infierno. Aquí los mejores por calidad-precio en España.</p>
+    <p style="color:#888;margin-bottom:30px;">Dormir con calor es imposible. Un ventilador silencioso (<40 dB) marca la diferencia entre una noche de descanso y un infierno. Aquí los mejores por calidad-precio en España.</p>
     
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <div class="product-rank">#1</div>
-      <img itemprop="image" src="https://m.media-amazon.com/images/I/71+X8J+2LJL._AC_UL320_.jpg" alt="Rowenta Turbo Silence Extreme" loading="lazy">
-      <div class="product-content">
-        <h3 itemprop="name">Rowenta Turbo Silence Extreme</h3>
-        <div class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-          <span class="stars">★★★★★</span>
-          <span itemprop="ratingValue">5.0</span>/5
-          <meta itemprop="reviewCount" content="4520">
-        </div>
-        <p itemprop="description">El más silencioso del mercado. 35 dB en modo noche. Oscilación automática, temporizador 12h. El favorito para dormir.</p>
-        <div class="specs">
-          <span>35 dB</span><span>12 velocidades</span><span>Temporizador</span><span>45W</span>
-        </div>
-        <div class="price-row">
-          <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="priceCurrency" content="EUR"></span>
-            <span itemprop="price" content="89">89€</span>
-          </span>
-          <a href="https://www.amazon.es/dp/B07CQ9J1XK?tag=lexeditorial-21" class="cta-btn" target="_blank" rel="sponsored nofollow">🔥 Ver Precio en Amazon →</a>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://m.media-amazon.com/images/I/71+X8J+2LJL._AC_UL320_.jpg" alt="Rowenta Turbo Silence Extreme" loading="lazy">
+        <div class="rank">#1</div>
+      </div>
+      <div class="product-info">
+        <h3>Rowenta Turbo Silence Extreme</h3>
+        <div class="stars">★★★★★ <span>(4520 opiniones)</span></div>
+        <p class="desc">El más silencioso del mercado. 35 dB en modo noche. Oscilación automática, temporizador 12h. El favorito para dormir.</p>
+        <div class="long-desc">Rowenta ha dominado el mercado de ventiladores silenciosos durante años, y el Turbo Silence Extreme es su buque insignia. 35 dB en modo noche es prácticamente inaudible — duermes sin notar que está encendido. 12 velocidades para control preciso, oscilación automática de 180° y temporizador de 12 horas. Diseño estable que no vibra ni se mueve. A 89€ no es el más barato, pero si valoras el sueño, es la mejor inversión.</div>
+        <div class="specs"><span>35 dB</span><span>12 velocidades</span><span>Temporizador</span><span>45W</span></div>
+        <div class="bottom">
+          <span class="price">89€</span>
+          <a href="https://www.amazon.es/dp/B07CQ9J1XK?tag=lexeditorial-21" class="cta" target="_blank" rel="sponsored nofollow">Ver en Amazon →</a>
         </div>
       </div>
     </div>
 
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <div class="product-rank">#2</div>
-      <img itemprop="image" src="https://m.media-amazon.com/images/I/61+KpD5D0YL._AC_UL320_.jpg" alt="Taurus Boreal 16" loading="lazy">
-      <div class="product-content">
-        <h3 itemprop="name">Taurus Boreal 16</h3>
-        <div class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-          <span class="stars">★★★★☆</span>
-          <span itemprop="ratingValue">4.0</span>/5
-          <meta itemprop="reviewCount" content="2100">
-        </div>
-        <p itemprop="description">Relación calidad-precio insuperable. 40 dB, 3 velocidades, diámetro 40cm. Marca española con garantía local.</p>
-        <div class="specs">
-          <span>40 dB</span><span>3 velocidades</span><span>40cm</span><span>45W</span>
-        </div>
-        <div class="price-row">
-          <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="priceCurrency" content="EUR"></span>
-            <span itemprop="price" content="29">29€</span>
-          </span>
-          <a href="https://www.amazon.es/dp/B07S7ZQDLJ?tag=lexeditorial-21" class="cta-btn" target="_blank" rel="sponsored nofollow">🔥 Ver Precio en Amazon →</a>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://m.media-amazon.com/images/I/61+KpD5D0YL._AC_UL320_.jpg" alt="Taurus Boreal 16" loading="lazy">
+        <div class="rank">#2</div>
+      </div>
+      <div class="product-info">
+        <h3>Taurus Boreal 16</h3>
+        <div class="stars">★★★★☆ <span>(2100 opiniones)</span></div>
+        <p class="desc">Relación calidad-precio insuperable. 40 dB, 3 velocidades, diámetro 40cm. Marca española con garantía local.</p>
+        <div class="long-desc">Taurus es una marca española que entiende el verano español. El Boreal 16 ofrece 40 dB de ruido a un precio que parece error: 29€. 3 velocidades, diámetro de 40cm que genera aire suficiente para una habitación mediana, y garantía nacional con servicio técnico en España. No tiene modos inteligentes ni WiFi, pero enfría y hace poco ruido por menos de 30€. Para quien quiere dormir fresco sin gastar.</div>
+        <div class="specs"><span>40 dB</span><span>3 velocidades</span><span>40cm</span><span>45W</span></div>
+        <div class="bottom">
+          <span class="price">29€</span>
+          <a href="https://www.amazon.es/dp/B07S7ZQDLJ?tag=lexeditorial-21" class="cta" target="_blank" rel="sponsored nofollow">Ver en Amazon →</a>
         </div>
       </div>
     </div>
 
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <div class="product-rank">#3</div>
-      <img itemprop="image" src="https://m.media-amazon.com/images/I/71mLZZfO+YL._AC_UL320_.jpg" alt="Cecotec EnergySilence 1010" loading="lazy">
-      <div class="product-content">
-        <h3 itemprop="name">Cecotec EnergySilence 1010</h3>
-        <div class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-          <span class="stars">★★★★☆</span>
-          <span itemprop="ratingValue">4.0</span>/5
-          <meta itemprop="reviewCount" content="1680">
-        </div>
-        <p itemprop="description">Diseño moderno, 10 aspas aerodinámicas. 38 dB, control remoto, modo brisa natural. Muy completo por el precio.</p>
-        <div class="specs">
-          <span>38 dB</span><span>10 aspas</span><span>Mando</span><span>55W</span>
-        </div>
-        <div class="price-row">
-          <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="priceCurrency" content="EUR"></span>
-            <span itemprop="price" content="49">49€</span>
-          </span>
-          <a href="https://www.amazon.es/dp/B07V3Q4M1X?tag=lexeditorial-21" class="cta-btn" target="_blank" rel="sponsored nofollow">🔥 Ver Precio en Amazon →</a>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://m.media-amazon.com/images/I/71mLZZfO+YL._AC_UL320_.jpg" alt="Cecotec EnergySilence 1010" loading="lazy">
+        <div class="rank">#3</div>
+      </div>
+      <div class="product-info">
+        <h3>Cecotec EnergySilence 1010</h3>
+        <div class="stars">★★★★☆ <span>(1680 opiniones)</span></div>
+        <p class="desc">Diseño moderno, 10 aspas aerodinámicas. 38 dB, control remoto, modo brisa natural. Muy completo por el precio.</p>
+        <div class="long-desc">Cecotec aplica su filosofía de tecnología accesible a los ventiladores. El EnergySilence 1010 tiene 10 aspas aerodinámicas que generan más aire con menos ruido y consumo. 38 dB en modo noche, control remoto para no levantarte de la cama, y modo 'brisa natural' que varía la velocidad imitando el viento real. A 49€ es el punto dulce entre precio y características. Diseño moderno que no destroza la decoración.</div>
+        <div class="specs"><span>38 dB</span><span>10 aspas</span><span>Mando</span><span>55W</span></div>
+        <div class="bottom">
+          <span class="price">49€</span>
+          <a href="https://www.amazon.es/dp/B07V3Q4M1X?tag=lexeditorial-21" class="cta" target="_blank" rel="sponsored nofollow">Ver en Amazon →</a>
         </div>
       </div>
     </div>
 
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <div class="product-rank">#4</div>
-      <img itemprop="image" src="https://m.media-amazon.com/images/I/61+KpD5D0YL._AC_UL320_.jpg" alt="Philips Series 3000" loading="lazy">
-      <div class="product-content">
-        <h3 itemprop="name">Philips Series 3000</h3>
-        <div class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-          <span class="stars">★★★★☆</span>
-          <span itemprop="ratingValue">4.0</span>/5
-          <meta itemprop="reviewCount" content="920">
-        </div>
-        <p itemprop="description">Ventilador de torre compacto. Ocupa poco espacio, ideal para escritorios. 42 dB, 3 modos, filtro de polvo integrado.</p>
-        <div class="specs">
-          <span>42 dB</span><span>Torre</span><span>Filtro polvo</span><span>35W</span>
-        </div>
-        <div class="price-row">
-          <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="priceCurrency" content="EUR"></span>
-            <span itemprop="price" content="59">59€</span>
-          </span>
-          <a href="https://www.amazon.es/dp/B08N5WRWNW?tag=lexeditorial-21" class="cta-btn" target="_blank" rel="sponsored nofollow">🔥 Ver Precio en Amazon →</a>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://m.media-amazon.com/images/I/61+KpD5D0YL._AC_UL320_.jpg" alt="Philips Series 3000" loading="lazy">
+        <div class="rank">#4</div>
+      </div>
+      <div class="product-info">
+        <h3>Philips Series 3000</h3>
+        <div class="stars">★★★★☆ <span>(920 opiniones)</span></div>
+        <p class="desc">Ventilador de torre compacto. Ocupa poco espacio, ideal para escritorios. 42 dB, 3 modos, filtro de polvo integrado.</p>
+        <div class="long-desc">Cuando el espacio es limitado, un ventilador de torre es la solución. El Philips Series 3000 ocupa menos de 20cm de diámetro base, perfecto para escritorios, mesillas de noche o rincones estrechos. 42 dB no es el más silencioso pero es aceptable para trabajar o dormir si no eres ultra sensible al ruido. Filtro de polvo integrado que mejora la calidad del aire. 3 modos: normal, brisa y noche.</div>
+        <div class="specs"><span>42 dB</span><span>Torre</span><span>Filtro polvo</span><span>35W</span></div>
+        <div class="bottom">
+          <span class="price">59€</span>
+          <a href="https://www.amazon.es/dp/B08N5WRWNW?tag=lexeditorial-21" class="cta" target="_blank" rel="sponsored nofollow">Ver en Amazon →</a>
         </div>
       </div>
     </div>
 
-    <div class="product-card" itemscope itemtype="https://schema.org/Product">
-      <div class="product-rank">#5</div>
-      <img itemprop="image" src="https://m.media-amazon.com/images/I/71+X8J+2LJL._AC_UL320_.jpg" alt="Dyson Cool AM07" loading="lazy">
-      <div class="product-content">
-        <h3 itemprop="name">Dyson Cool AM07</h3>
-        <div class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-          <span class="stars">★★★★☆</span>
-          <span itemprop="ratingValue">4.0</span>/5
-          <meta itemprop="reviewCount" content="1340">
-        </div>
-        <p itemprop="description">Sin aspas, totalmente seguro para niños y mascotas. 10 niveles de potencia, diseño premium. El lujo silencioso.</p>
-        <div class="specs">
-          <span>56 dB</span><span>Sin aspas</span><span>10 niveles</span><span>56W</span>
-        </div>
-        <div class="price-row">
-          <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="priceCurrency" content="EUR"></span>
-            <span itemprop="price" content="299">299€</span>
-          </span>
-          <a href="https://www.amazon.es/dp/B00EPT8J1O?tag=lexeditorial-21" class="cta-btn" target="_blank" rel="sponsored nofollow">🔥 Ver Precio en Amazon →</a>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://m.media-amazon.com/images/I/71+X8J+2LJL._AC_UL320_.jpg" alt="Dyson Cool AM07" loading="lazy">
+        <div class="rank">#5</div>
+      </div>
+      <div class="product-info">
+        <h3>Dyson Cool AM07</h3>
+        <div class="stars">★★★★☆ <span>(1340 opiniones)</span></div>
+        <p class="desc">Sin aspas, totalmente seguro para niños y mascotas. 10 niveles de potencia, diseño premium. El lujo silencioso.</p>
+        <div class="long-desc">Dyson revolucionó los ventiladores eliminando las aspas visibles. El AM07 es completamente seguro para niños curiosos y mascotas — no hay nada que puedan tocar. 10 niveles de potencia precisos, diseño minimalista que parece escultura, y tecnología Air Multiplier que amplifica el flujo de aire. A 299€ es un lujo, pero si buscas lo último en diseño y seguridad familiar, no hay competencia. Mantenimiento cero: solo limpia la base ocasionalmente.</div>
+        <div class="specs"><span>56 dB</span><span>Sin aspas</span><span>10 niveles</span><span>56W</span></div>
+        <div class="bottom">
+          <span class="price">299€</span>
+          <a href="https://www.amazon.es/dp/B00EPT8J1O?tag=lexeditorial-21" class="cta" target="_blank" rel="sponsored nofollow">Ver en Amazon →</a>
         </div>
       </div>
     </div>
@@ -212,10 +187,10 @@
   </div>
   <div class="content">
     <h2>📖 Guía de Compra</h2>
-    <p>**Decibelios:** <40 dB = silencioso | 40-50 dB = aceptable | >50 dB = ruidoso. Busca modo 'noche' o 'sleep'.</p>
-<p>**Potencia:** 45-60W es estándar. Más potencia = más aire pero más ruido y consumo. Equilibrio clave.</p>
-<p>**Oscilación:** Imprescindible para distribuir aire. Sin oscilación solo enfrías un punto.</p>
-<p>**Mantenimiento:** Limpia aspas mensualmente. Polvo acumulado aumenta ruido y reduce eficiencia.</p>
+    <p><strong>Decibelios:</strong> <40 dB = silencioso | 40-50 dB = aceptable | >50 dB = ruidoso. Busca modo 'noche' o 'sleep'.</p>
+<p><strong>Potencia:</strong> 45-60W es estándar. Más potencia = más aire pero más ruido y consumo. Equilibrio clave.</p>
+<p><strong>Oscilación:</strong> Imprescindible para distribuir aire. Sin oscilación solo enfrías un punto.</p>
+<p><strong>Mantenimiento:</strong> Limpia aspas mensualmente. Polvo acumulado aumenta ruido y reduce eficiencia.</p>
   </div>
   <div class="ad-slot">
     <p>📢 Espacio Publicitario</p>
@@ -243,8 +218,8 @@
 </div>
 <footer>
   <div class="container">
-    <p>© 2026 Ventiladores Silenciosos España — Enlaces de afiliados. Ganamos comisión sin coste extra para ti.</p>
-    <p><a href="https://jfa30.github.io/legaltech-blog/" style="color:#667eea;">← Volver al inicio</a></p>
+    <p>© 2026 — Enlaces de afiliados. Ganamos comisión sin coste extra.</p>
+    <p><a href="https://jfa30.github.io/legaltech-blog/">← Volver al inicio</a></p>
   </div>
 </footer>
 </body>
