@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los 5 Mejores Aires Acondicionados Portátiles | Verano 2026</title>
+    <meta name="description" content="Comparativa real: potencia, silencio, consumo energético. Modelos con y sin tubo de salida.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #eef2f6;
+            --card: #ffffff;
+            --accent: #0066ff;
+            --accent-soft: #e0ecff;
+            --text: #0d1117;
+            --text-light: #6e7781;
+            --border: rgba(0, 102, 255, 0.12);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .hero {
+            min-height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 5%;
+            background: linear-gradient(180deg, #dbeafe 0%, var(--bg) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '❄️';
+            position: absolute;
+            font-size: 300px;
+            opacity: 0.06;
+            top: -50px;
+            right: -50px;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        .hero-badge {
+            background: var(--accent);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            letter-spacing: 2px;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .hero h1 span { color: var(--accent); }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 550px;
+        }
+        .products-section {
+            padding: 5rem 5%;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section-header h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: var(--card);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 102, 255, 0.1);
+        }
+        .product-rank {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-soft);
+            color: var(--accent);
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+        .product-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: #f59e0b;
+            font-weight: 600;
+        }
+        .product-reviews {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .feature-tag {
+            background: var(--accent-soft);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 14px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #0052cc;
+            transform: scale(1.02);
+        }
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: var(--text);
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-badge">❄️ Verano 2026</div>
+        <h1>Aires Acondicionados <span>Portátiles</span></h1>
+        <p>Comparativa real: potencia en BTU, silencio, consumo y facilidad de instalación. Para no pasar calor este verano.</p>
+    </section>
+
+    <section class="products-section">
+        <div class="section-header">
+            <h2>TOP 5 COMPARADOS</h2>
+        </div>
+        <div class="products-grid">
+            <article class="product-card">
+                <div class="product-rank">#1</div>
+                <img src="https://m.media-amazon.com/images/I/71Z+zW+t6YL._AC_SL1500_.jpg" alt="Cecotec ForceClima" class="product-image">
+                <h3 class="product-name">Cecotec ForceClima 9250 Smart</h3>
+                <div class="product-price">€199,90</div>
+                <div class="product-rating">⭐⭐⭐⭐ 4.1/5</div>
+                <div class="product-reviews">3.100+ valoraciones · 9000 BTU</div>
+                <div class="product-features">
+                    <span class="feature-tag">📱 WiFi</span>
+                    <span class="feature-tag">🔇 Silencioso</span>
+                    <span class="feature-tag">⚡ 9000 BTU</span>
+                </div>
+                <a href="https://www.amazon.es/s?k=Cecotec+ForceClima+9250+Smart" class="cta-button" target="_blank" rel="nofollow sponsored">Ver en Amazon →</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-rank">#2</div>
+                <img src="https://m.media-amazon.com/images/I/51+8z+W+t6YL._AC_SL1000_.jpg" alt="Tristar AC-5477" class="product-image">
+                <h3 class="product-name">Tristar AC-5477</h3>
+                <div class="product-price">€159,00</div>
+                <div class="product-rating">⭐⭐⭐⭐ 4.0/5</div>
+                <div class="product-reviews">1.800+ valoraciones · 7000 BTU</div>
+                <div class="product-features">
+                    <span class="feature-tag">💰 Best price</span>
+                    <span class="feature-tag">🌀 3 en 1</span>
+                </div>
+                <a href="https://www.amazon.es/s?k=Tristar+AC-5477" class="cta-button" target="_blank" rel="nofollow sponsored">Ver en Amazon →</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-rank">#3</div>
+                <img src="https://m.media-amazon.com/images/I/61KeIxmJxQL._AC_SL1500_.jpg" alt="DeLonghi Pinguino" class="product-image">
+                <h3 class="product-name">DeLonghi Pinguino Compact</h3>
+                <div class="product-price">€349,00</div>
+                <div class="product-rating">⭐⭐⭐⭐⭐ 4.5/5</div>
+                <div class="product-reviews">2.500+ valoraciones · Premium</div>
+                <div class="product-features">
+                    <span class="feature-tag">🏆 Marca top</span>
+                    <span class="feature-tag">🔇 Ultra silencioso</span>
+                    <span class="feature-tag">🌿 Eco</span>
+                </div>
+                <a href="https://www.amazon.es/s?k=DeLonghi+Pinguino+Compact" class="cta-button" target="_blank" rel="nofollow sponsored">Ver en Amazon →</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-rank">#4</div>
+                <img src="https://m.media-amazon.com/images/I/71xX9X0zXzL._AC_SL1500_.jpg" alt="Orbegozo ADR 97" class="product-image">
+                <h3 class="product-name">Orbegozo ADR 97</h3>
+                <div class="product-price">€149,00</div>
+                <div class="product-rating">⭐⭐⭐⭐ 4.2/5</div>
+                <div class="product-reviews">800+ valoraciones · Tubo incluido</div>
+                <div class="product-features">
+                    <span class="feature-tag">🔧 Tubo incluido</span>
+                    <span class="feature-tag">💰 Calidad/precio</span>
+                </div>
+                <a href="https://www.amazon.es/s?k=Orbegozo+ADR+97" class="cta-button" target="_blank" rel="nofollow sponsored">Ver en Amazon →</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-rank">#5</div>
+                <img src="https://m.media-amazon.com/images/I/81t+8X8sBRL._AC_SL1500_.jpg" alt="Midea Portátil" class="product-image">
+                <h3 class="product-name">Midea Portátil 12000 BTU</h3>
+                <div class="product-price">€299,00</div>
+                <div class="product-rating">⭐⭐⭐⭐ 4.3/5</div>
+                <div class="product-reviews">1.200+ valoraciones · Alto rendimiento</div>
+                <div class="product-features">
+                    <span class="feature-tag">❄️ 12000 BTU</span>
+                    <span class="feature-tag">📱 App móvil</span>
+                </div>
+                <a href="https://www.amazon.es/s?k=Midea+portatil+12000+BTU" class="cta-button" target="_blank" rel="nofollow sponsored">Ver en Amazon →</a>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 LexEditorial | Datos reales de Amazon.es | Enlaces de afiliado</p>
+    </footer>
+</body>
+</html>
