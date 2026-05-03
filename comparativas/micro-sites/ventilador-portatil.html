@@ -28,7 +28,6 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        /* Hero Section - Swiss Minimalism */
         .hero {
             min-height: 70vh;
             display: grid;
@@ -116,7 +115,6 @@
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
-        /* Products Grid */
         .products-section {
             padding: 6rem 8%;
             background: var(--bg);
@@ -187,14 +185,19 @@
             font-weight: 800;
             font-size: 1.25rem;
         }
-        .product-image {
+        .product-placeholder {
             width: 100%;
             height: 200px;
-            object-fit: contain;
+            border-radius: 16px;
             margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            background: linear-gradient(135deg, #f0f7f4, #e0f2eb);
             transition: transform 0.4s ease;
         }
-        .product-card:hover .product-image {
+        .product-card:hover .product-placeholder {
             transform: scale(1.05);
         }
         .product-name {
@@ -257,7 +260,6 @@
             transform: scale(1.02);
             box-shadow: 0 10px 30px rgba(0, 212, 170, 0.4);
         }
-        /* Footer */
         footer {
             text-align: center;
             padding: 3rem;
@@ -265,14 +267,8 @@
             color: #94a3b8;
             font-size: 0.875rem;
         }
-        /* Responsive */
         @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                min-height: auto;
-                padding: 3rem 5%;
-                text-align: center;
-            }
+            .hero { grid-template-columns: 1fr; min-height: auto; padding: 3rem 5%; text-align: center; }
             .hero-visual { display: none; }
             .hero-content h1 { font-size: 2rem; }
             .products-section { padding: 3rem 5%; }
@@ -301,7 +297,7 @@
         <div class="products-grid">
             <article class="product-card">
                 <div class="product-rank">#1</div>
-                <img src="https://m.media-amazon.com/images/I/71mL6h+O4YL._AC_SL1500_.jpg" alt="Jsdoin Portable Handheld Fan" class="product-image">
+                <div class="product-placeholder">💨</div>
                 <h3 class="product-name">Jsdoin Portable Handheld Fan</h3>
                 <div class="product-price">€13,99</div>
                 <div class="product-rating">⭐⭐⭐⭐⭐ 4.3/5</div>
@@ -316,7 +312,7 @@
 
             <article class="product-card">
                 <div class="product-rank">#2</div>
-                <img src="https://m.media-amazon.com/images/I/61KeIxmJxQL._AC_SL1500_.jpg" alt="Ventilador de mano USB recargable" class="product-image">
+                <div class="product-placeholder">💨</div>
                 <h3 class="product-name">Ventilador de Mano USB Recargable</h3>
                 <div class="product-price">€13,83</div>
                 <div class="product-rating">⭐⭐⭐⭐ 4.2/5</div>
@@ -331,7 +327,7 @@
 
             <article class="product-card">
                 <div class="product-rank">#3</div>
-                <img src="https://m.media-amazon.com/images/I/61gC6Y+xdYL._AC_SL1500_.jpg" alt="Primevolve Ventilador portátil giratorio" class="product-image">
+                <div class="product-placeholder">💨</div>
                 <h3 class="product-name">Primevolve Ventilador Giratorio</h3>
                 <div class="product-price">€40,99</div>
                 <div class="product-rating">⭐⭐⭐⭐ 4.4/5</div>
