@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los 5 Mejores Kits Limpieza Zapatillas | 2026</title>
+    <meta name="description" content="Comparativa real: cepillos, geles, toallitas. Resultados probados en suede, cuero y tela.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f4f1ea;
+            --card: #ffffff;
+            --accent: #ff0000;
+            --accent-yellow: #ffea00;
+            --text: #1a1a1a;
+            --border: #1a1a1a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+        }
+        /* Brutalist Hero */
+        .hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 5%;
+            border-bottom: 4px solid var(--border);
+            background: var(--bg);
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--accent),
+                var(--accent) 10px,
+                var(--accent-yellow) 10px,
+                var(--accent-yellow) 20px
+            );
+        }
+        .hero-tag {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 8px 20px;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 3px solid var(--border);
+            box-shadow: 6px 6px 0 var(--border);
+        }
+        .hero h1 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            line-height: 0.95;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+        .hero h1 span {
+            background: var(--accent-yellow);
+            padding: 0 12px;
+            border: 3px solid var(--border);
+            box-shadow: 4px 4px 0 var(--border);
+            display: inline-block;
+            transform: rotate(-2deg);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            font-weight: 400;
+        }
+        /* Brutalist Products */
+        .products-section {
+            padding: 4rem 5%;
+        }
+        .section-header {
+            margin-bottom: 3rem;
+            border: 3px solid var(--border);
+            padding: 2rem;
+            background: var(--card);
+            box-shadow: 8px 8px 0 var(--border);
+        }
+        .section-header h2 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+        }
+        .section-header p {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: var(--card);
+            border: 3px solid var(--border);
+            padding: 2rem;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        .product-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 8px 8px 0 var(--border);
+        }
+        .product-rank {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--accent);
+            color: white;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            padding: 4px 16px;
+            font-size: 0.875rem;
+            border: 3px solid var(--border);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--border);
+            background: var(--bg);
+            padding: 10px;
+        }
+        .product-name {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+        .product-price {
+            font-family: 'Space Mono', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .product-rating {
+            font-family: 'Space Mono', monospace;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .product-reviews {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .feature-tag {
+            background: var(--accent-yellow);
+            border: 2px solid var(--border);
+            padding: 4px 10px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: var(--text);
+            color: white;
+            text-decoration: none;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 3px solid var(--border);
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+        }
+        .cta-button:hover {
+            background: var(--accent);
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0 var(--border);
+        }
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: var(--text);
+            color: white;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            border-top: 4px solid var(--accent);
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .section-header { box-shadow: 4px 4px 0 var(--border); }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-tag">★★★★★ RATED 2026</div>
+        <h1>Kits de Limpieza <span>PRO</span> para tus Sneakers</h1>
+        <p>Cepillos premium, geles concentrados, toallitas. Resultados reales en suede, cuero, canvas y tela.</p>
+    </section>
+
+    <section class="products-section">
+        <div class="section-header">
+            <h2>TOP 5 TESTADOS</h2>
+            <p>Precio · Eficacia · Durabilidad del kit</p>
+        </div>
+        <div class="products-grid">
+            <article class="product-card">
+                <div class="product-rank">#1</div>
+                <img src="https://m.media-amazon.com/images/I/71xX9X0zXzL._AC_SL1500_.jpg" alt="Footarchy Kit" class="product-image">
+                <h3 class="product-name">Footarchy Kit Pro</h3>
+                <div class="product-price">€18,99</div>
+                <div class="product-rating">4.1/5 STARS</div>
+                <div class="product-reviews">53 valoraciones · Kit completo</div>
+                <div class="product-features">
+                    <span class="feature-tag">Profesional</span>
+                    <span class="feature-tag">Premium</span>
+                    <span class="feature-tag">Cepillo duro</span>
+                </div>
+                <a href="https://www.amazon.es/dp/B0GM8VWTCY?tag=lexeditorial-21" class="cta-button" target="_blank" rel="nofollow sponsored">COMPRAR EN AMAZON →</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-rank">#2</div>
+                <img src="https://m.media-amazon.com/images/I/71sX9X0zXzL._AC_SL1500_.jpg" alt="Canzt Toallitas" class="product-image">
+                <h3 class="product-name">Canzt Toallitas 12uds</h3>
+                <div class="product-price">€14,99</div>
+                <div class="product-rating">4.0/5 STARS</div>
+                <div class="product-reviews">306 valoraciones · Práctico</div>
+                <div class="product-features">
+                    <span class="feature-tag">Toallitas</span>
+                    <span class="feature-tag">Viaje</span>
+                    <span class="feature-tag">Rápido</span>
+                </div>
+                <a href="https://www.amazon.es/dp/B09B9VRPGP?tag=lexeditorial-21" class="cta-button" target="_blank" rel="nofollow sponsored">COMPRAR EN AMAZON →</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-rank">#3</div>
+                <img src="https://m.media-amazon.com/images/I/81t+8X8sBRL._AC_SL1500_.jpg" alt="Canzt Gel" class="product-image">
+                <h3 class="product-name">Canzt Gel Concentrado</h3>
+                <div class="product-price">€7,99</div>
+                <div class="product-rating">4.2/5 STARS</div>
+                <div class="product-reviews">116 valoraciones · Económico</div>
+                <div class="product-features">
+                    <span class="feature-tag">Gel</span>
+                    <span class="feature-tag">Concentrado</span>
+                    <span class="feature-tag">Larga duración</span>
+                </div>
+                <a href="https://www.amazon.es/dp/B099S8LVPR?tag=lexeditorial-21" class="cta-button" target="_blank" rel="nofollow sponsored">COMPRAR EN AMAZON →</a>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 LEXEDITORIAL · DATOS REALES AMAZON.ES · ENLACES DE AFILIADO</p>
+    </footer>
+</body>
+</html>

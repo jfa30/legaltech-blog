@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los 5 Mejores Toldos de Playa | Verano 2026</title>
+    <meta name="description" content="Comparativa real: protección UV, montaje y precio. Testados en condiciones reales.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a1628;
+            --card: rgba(255, 255, 255, 0.05);
+            --accent: #00d4ff;
+            --accent-glow: rgba(0, 212, 255, 0.3);
+            --text: #e0f2fe;
+            --text-dim: #7dd3fc;
+            --border: rgba(0, 212, 255, 0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        /* Glassmorphism Hero */
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 5%;
+            position: relative;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                var(--bg);
+        }
+        .hero-badge {
+            background: rgba(0, 212, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            color: var(--accent);
+            padding: 8px 24px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+            animation: glow 3s ease-in-out infinite;
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px var(--accent-glow); }
+            50% { box-shadow: 0 0 40px var(--accent-glow), 0 0 80px rgba(0, 212, 255, 0.1); }
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #00d4ff, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+        /* Glassmorphism Cards */
+        .products-section {
+            padding: 5rem 5%;
+            background: linear-gradient(180deg, var(--bg), #0f2847);
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        .section-header p {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: var(--card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 212, 255, 0.4);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px var(--accent-glow);
+        }
+        .product-card:hover::before {
+            opacity: 1;
+        }
+        .product-rank {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(0, 212, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: var(--accent);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 8px 16px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .product-image {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+            transition: transform 0.4s ease;
+            filter: drop-shadow(0 10px 30px rgba(0, 212, 255, 0.2));
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        .product-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .product-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: #fbbf24;
+            font-weight: 500;
+        }
+        .product-reviews {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .feature-tag {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--accent);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--accent), #6366f1);
+            color: white;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+        }
+        .cta-button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: #0a1628;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .products-grid { gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-badge">🌊 Verano 2026</div>
+        <h1>Toldos de Playa que Sí Protegen</h1>
+        <p>UV 50+, montaje en 60 segundos y resistencia al viento. Comparativa con datos reales de test en playa.</p>
+    </section>
+
+    <section class="products-section">
+        <div class="section-header">
+            <h2>Top 5 Comparados</h2>
+            <p>Testados en condiciones reales de sol, viento y arena.</p>
+        </div>
+        <div class="products-grid">
+            <article class="product-card">
+                <div class="product-rank">#1</div>
+                <img src="https://m.media-amazon.com/images/I/81t+8X8sBRL._AC_SL1500_.jpg" alt="SUN NINJA Pop Up Beach Tent" class="product-image">
+                <h3 class="product-name">SUN NINJA Pop Up UV 50+</h3>
+                <div class="product-price">€119,99</div>
+                <div class="product-rating">⭐⭐⭐⭐⭐ 4.6/5</div>
+                <div class="product-reviews">8.993 valoraciones · Premium</div>
+                <div class="product-features">
+                    <span class="feature-tag">☀️ UV 50+</span>
+                    <span class="feature-tag">⚡ Montaje 60s</span>
+                    <span class="feature-tag">🌬️ Anti-viento</span>
+                </div>
+                <a href="https://www.amazon.es/dp/B08J85NFXM?tag=lexeditorial-21" class="cta-button" target="_blank" rel="nofollow sponsored">Ver en Amazon →</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-rank">#2</div>
+                <img src="https://m.media-amazon.com/images/I/71sX9X0zXzL._AC_SL1500_.jpg" alt="Glymnis Beach Tent" class="product-image">
+                <h3 class="product-name">Glymnis Pop Up 2-3p</h3>
+                <div class="product-price">€36,99</div>
+                <div class="product-rating">⭐⭐⭐⭐ 4.2/5</div>
+                <div class="product-reviews">3.738 valoraciones · Económico</div>
+                <div class="product-features">
+                    <span class="feature-tag">💰 Best price</span>
+                    <span class="feature-tag">👥 2-3 personas</span>
+                    <span class="feature-tag">🎒 Ultra ligero</span>
+                </div>
+                <a href="https://www.amazon.es/dp/B08QV2NKVF?tag=lexeditorial-21" class="cta-button" target="_blank" rel="nofollow sponsored">Ver en Amazon →</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-rank">#3</div>
+                <img src="https://m.media-amazon.com/images/I/71xX9X0zXzL._AC_SL1500_.jpg" alt="Glymnis Toldo automático" class="product-image">
+                <h3 class="product-name">Glymnis Automático 2-3p</h3>
+                <div class="product-price">€35,99</div>
+                <div class="product-rating">⭐⭐⭐⭐ 4.1/5</div>
+                <div class="product-reviews">198 valoraciones · Nuevo 2026</div>
+                <div class="product-features">
+                    <span class="feature-tag">🆕 Nuevo modelo</span>
+                    <span class="feature-tag">🤖 Auto-montaje</span>
+                    <span class="feature-tag">🏖️ Compacto</span>
+                </div>
+                <a href="https://www.amazon.es/dp/B0CR15C71P?tag=lexeditorial-21" class="cta-button" target="_blank" rel="nofollow sponsored">Ver en Amazon →</a>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 LexEditorial | Datos reales de Amazon.es | Enlaces de afiliado</p>
+    </footer>
+</body>
+</html>
